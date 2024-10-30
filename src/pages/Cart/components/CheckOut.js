@@ -13,9 +13,6 @@ export const CheckOut = ({ setCheckOut }) => {
     const { cartList, total, clearCart } = useCart();
     const [user, setUser] = useState({});
 
-    const token = JSON.parse(sessionStorage.getItem("token"));
-    const cbid = JSON.parse(sessionStorage.getItem("cbid"));
-
     useEffect(() => {
         async function fetchData() {
             try{
@@ -30,7 +27,7 @@ export const CheckOut = ({ setCheckOut }) => {
             }
         }
         fetchData();
-    }, []);
+    }, []); //eslint-disable-line
 
     async function handleOrderSubmit(event) {
         event.preventDefault();

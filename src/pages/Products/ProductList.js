@@ -32,9 +32,9 @@ export const ProductList = () => {
         });
       }
     }
-
+      
     fetchProducts();
-  }, [searchTerm]);  // eslint disable-line // Include searchTerm in the dependency array
+  }, [searchTerm]); //eslint-disable-line
 
   return (
     <main>
